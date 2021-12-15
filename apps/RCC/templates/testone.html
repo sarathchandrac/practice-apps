@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Constructions</title>
+  </head>
+  <body>
+    <h1>Name {{name}}</h1>
+    <div class="container">
+      <p>Loop through the list:</p>
+      <ul>
+        {% for n in numbers %}
+        <li>{{n}}</li>
+        {% endfor %}
+      </ul>
+      {% if 'one' in numbers %}
+      <p>found the number</p>
+      {%else%}
+      <p>Number not found</p>
+      {% endif %}
+    </div>
+  </body>
+</html>
