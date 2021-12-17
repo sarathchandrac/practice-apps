@@ -1,0 +1,79 @@
+{% include "header.html" %}
+
+  <!-- ======= Intro Section ======= -->
+  <main id="main">
+
+    <!-- ======= Services Section ======= -->
+    <section class="section-services section-t8">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+                <h4 class="title-a">Orders</h4>
+            </div>
+          </div>
+  
+  
+          <div class="container" id="pdfTable" #pdfTable>
+              <div class="row">
+                <div class="col-md-1">
+                  <b>Order Id</b>
+                </div>
+                <div class="col-md-2">
+                  <b>Customer</b>
+                </div>
+                <div class="col-md-2">
+                  <b>Date</b>
+                </div>
+                <div class="col-md-1">
+                  <b>Model</b>
+                </div>
+                <div class="col-md-1">
+                  <b>Qty</b>
+                </div>
+                <div class="col-md-1">
+                  <b>Unit Price</b>
+                </div>
+                <div class="col-md-1">
+                  <b>Total</b>
+                </div>
+                <div class="col-md-2">
+                  <b>Print</b>
+                </div>
+              </div>
+              {% for row in rows %}
+              <div class="row">
+                <div class="col-md-1">
+                    {{row["id"]}}
+                </div>
+                <div class="col-md-2">
+                    {{row["customer"]}}
+                </div>
+                <div class="col-md-2">
+                    {{row["created_date"]}}
+                </div>
+                <div class="col-md-1">
+                    {{row["model"]}}
+                </div>
+                <div class="col-md-1">
+                    {{row["qty"]}}
+                </div>
+                <div class="col-md-1">
+                    {{row["unit_price"]}}
+                </div>
+                <div class="col-md-1">
+                    {{row["total_price"]}}
+                </div>
+                <div class="col-md-2">
+                  <a class="nav-link " href="/contactus">Print PDF</a>
+                </div>
+              </div>
+              {% endfor %}
+            </div>
+    </div>
+  </section><!-- End Services Section -->
+  
+
+</main><!-- End #main -->
+
+
+{% include "footer.html" %}

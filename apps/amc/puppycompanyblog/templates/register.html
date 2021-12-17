@@ -1,12 +1,28 @@
-{% extends "base.html" %}
-{% block content %}
-<form method="POST">
-    {# This hidden_tag is a CSRF security feature. #}
-    {{ form.hidden_tag() }}
-    {{ form.email.label }} {{ form.email() }}<br>
-    {{ form.username.label }} {{ form.username() }}<br>
-    {{ form.password.label }} {{ form.password() }}<br>
-    {{ form.pass_confirm.label }} {{ form.pass_confirm() }}<br>
-    {{ form.submit() }}
-</form>
-{% endblock %}
+{% include "header.html" %}
+    <!-- ======= Intro Section ======= -->
+    <main id="main">
+        <section class="section-services section-t8">
+            <div class="container">
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="title-wrap d-flex justify-content-between">
+                    <div class="title-box">
+                      <h2 class="title-a">Registration</h2>
+                        <form method="POST">
+                            {# This hidden_tag is a CSRF security feature. #}
+                            {{ form.hidden_tag() }}
+                            {{ form.email.label }} {{ form.email() }}<br>
+                            {{ form.username.label }} {{ form.username() }}<br>
+                            {{ form.password.label }} {{ form.password() }}<br>
+                            {{ form.pass_confirm.label }} {{ form.pass_confirm() }}<br>
+                            {{ form.submit() }}
+                        </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+      
+            </div>
+          </section><!-- End Services Section -->
+    </main><!-- End #main -->
+{% include "footer.html" %}
